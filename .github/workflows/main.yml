@@ -7,10 +7,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Install Dependencies
-        run: npm ci
-      - name: Cypress run
-        uses: cypress/base@1.7.2
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          start: npm start
+          node-version: 14
+      - name: Initialize npm
+        run: npm init -y
+      - name: Install Dependencies
+        run: npm install
+      - name: Install Cypress
+        run: npm install cypress --save-dev
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          config-file: cypress.config.js

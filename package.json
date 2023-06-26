@@ -8,13 +8,14 @@
     "test": "cypress run"
   },
   "keywords": [],
-  "author": "",
+  "author": "SalBEH8 <salembehatt@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.15.0"
+    "cypress": "^12.16.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
     "cypress-mailslurp": "^1.7.0"
-  }
+  },
+  "repository": "git@github.com:SalBEH8/Projet_Trello.git"
 }
